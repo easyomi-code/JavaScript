@@ -85,3 +85,37 @@ console.log(person3); // {name: '유리', age: 8}
 console.log('--------------------------');
 
 // ◎ for ... in - 객체(object)에 있는 키 항목들을 반복적으로 반환한다.
+const newPerson = {
+  name: '은요미',
+  age: 26,
+  job: '개발자',
+};
+for (let key in newPerson) {
+  console.log(`key: ${key}, value: ${newPerson[key]}`);
+}
+// < 출력 결과 >
+// key: name, value: 은요미
+// key: age, value: 26
+// key: job, value: 개발자
+
+console.log('--------------------------');
+
+// ◎ 키 존재 여부 확인
+// 1. in operator - key in object
+console.log('name' in newPerson); // true
+if ('name' in newPerson) {
+  console.log(`'name'이 정의되어 있습니다.`);
+} else {
+  console.log(`'name'이 정의되어 있지 않습니다.`);
+}
+
+// 2. Object.hasOwn(), obj.hasOwnProperty()
+console.log(Object.hasOwn(person, 'name')); // true
+console.log(newPerson.hasOwnProperty('name')); // true
+
+// 3. if문 에서 바로 속성에 접근
+if (newPerson.name) {
+  console.log(`'name'이 정의되어 있습니다.`);
+} else {
+  console.log(`'name'이 정의되어 있지 않습니다.`);
+}
