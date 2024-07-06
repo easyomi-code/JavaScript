@@ -4,18 +4,22 @@
 // - 재사용하기 위해 코드를 그룹화한 것.
 
 // 함수 선언식(호이스팅 영향O - 선언 전에 사용 가능)
-// function helloA() {
-//   console.log('이름과 나이를 출력해 주세요.');
-//   console.log('이름: 은요미, 나이: 26');
-// }
-// helloA();
+function helloA() {
+  console.log('이름과 나이를 출력해 주세요.');
+  console.log('이름: 은요미, 나이: 26');
+}
+helloA();
 
-// // 함수 표현식(호이스팅 영향X)
-// const helloB = function () {
-//   console.log('이름과 나이를 출력해 주세요.');
-//   console.log('이름: 은요미, 나이: 26');
-// };
-// helloB();
+console.log('--------------------------');
+
+// 함수 표현식(호이스팅 영향X)
+const helloB = function () {
+  console.log('이름과 나이를 출력해 주세요.');
+  console.log('이름: 은요미, 나이: 26');
+};
+helloB();
+
+console.log('--------------------------');
 
 // 파라미터 - 함수 호출시 값 전달(외부에서 값을 전달받음)
 const sayHello = function (name, age) {
@@ -25,12 +29,16 @@ const sayHello = function (name, age) {
 sayHello('은요미', 26);
 sayHello('홍길동', 32);
 
+console.log('--------------------------');
+
 // 반환 값 - return 키워드를 사용하여 함수에서 값을 반환
 function sum(num1, num2) {
   return num1 + num2;
 }
 let result = sum(5, 3);
 console.log('result: ', result);
+
+console.log('--------------------------');
 
 // 함수 스코프(전역 스코프, 블록 스코프)
 function aFunc() {
@@ -49,11 +57,15 @@ function aFunc() {
 }
 aFunc();
 
+console.log('--------------------------');
+
 // 익명함수 - 이름이 없는 함수(재활용 필요 X)
 let fruits = ['사과', '바나나', '딸기'];
 fruits.forEach(function (item) {
   console.log('item: ', item);
 });
+
+console.log('--------------------------');
 
 // 즉시 실행 함수
 (function () {
