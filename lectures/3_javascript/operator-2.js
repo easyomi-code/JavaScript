@@ -11,6 +11,8 @@ console.log(true && true); // true
 console.log('Hello' && 'JavaScript'); // JavaScript
 console.log(false && 'true'); // false
 
+console.log('===========================');
+
 // OR(||) 연산 - 둘 중 하나라도 true이면 true 반환, 나머지 false
 console.log(x || y); // true
 console.log(false || false); // false
@@ -18,10 +20,14 @@ console.log('Hello' || 'JavaScript'); // Hello
 console.log(false || 'Easyomi'); // Easyomi
 console.log('Code' || false); // Code
 
+console.log('===========================');
+
 // NOT(!) 연산 - true이면 false, false이면 true 반환
 console.log(!x); // false
 console.log(!y); // true
 console.log(!'Eunyomi'); // false
+
+console.log('===========================');
 
 // 실습1) HTML 요소를 가져와 로그인 유효성 테스트 하기
 let btn = document.querySelector('#btn');
@@ -47,6 +53,8 @@ btn.addEventListener('click', function () {
     console.log('로그인 성공!');
   }
 });
+
+console.log('===========================');
 
 // 삼항 연산자 - 조건식? 값1 : 값2
 // true 이면 값1 반환, false 이면 값2 반환
