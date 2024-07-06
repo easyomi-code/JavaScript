@@ -31,6 +31,7 @@ sayHello('홍길동', 32);
 console.log('--------------------------');
 
 // 반환 값 - return 키워드를 사용하여 함수에서 값을 반환
+// return 문을 만나면 함수 실행이 종료되고, 해당 값을 반환
 function sum(num1, num2) {
   return num1 + num2;
 }
