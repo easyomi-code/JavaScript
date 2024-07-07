@@ -1,3 +1,5 @@
+// ◎ this란 무엇인가?
+// this 키워드는 함수가 호출될 때마다 설정되는 특별한 객체이다.
 let person1 = {
   fullname: '홍길동1',
   age: 20,
@@ -74,7 +76,7 @@ let printThis4 = print.bind(people1);
 let printThis5 = print.bind(people2); // bind는 단 한 번만 사용할 수 있다. ★
 printThis4();
 
-// < bind 예제 실습 >
+// < bind 예제 실습 - setTimeout >
 let people3 = {
   name: '은요미',
   age: 20,
